@@ -7,8 +7,9 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2020/21
 
 ## Tematika
 
-Izbrali si boste temo, s katero se bo vaš projekt ukvarjal.
-Tukaj boste napisali, kje ste dobili podatke, ter kakšen je vaš cilj.
+Zanimajo nas povprečne plače po Sloveniji glede na statistične regije.
+Raziskali bomo tudi kako izobrazba vpliva na višino plače ter 
+ali je v Sloveniji prisotna razlika plač med spoloma.
 
 ## Program
 
@@ -46,26 +47,3 @@ Za zagon tega vzorca je potrebno namestiti sledeče pakete za R:
 * `tmap` - za izrisovanje zemljevidov
 * `extrafont` - za pravilen prikaz šumnikov (neobvezno)
 
-## Binder
-
-Zgornje [povezave](#analiza-podatkov-s-programom-r-202021)
-omogočajo poganjanje projekta na spletu z orodjem [Binder](https://mybinder.org/).
-V ta namen je bila pripravljena slika za [Docker](https://www.docker.com/),
-ki vsebuje večino paketov, ki jih boste potrebovali za svoj projekt.
-
-Če se izkaže, da katerega od paketov, ki ji potrebujete, ni v sliki,
-lahko za sprotno namestitev poskrbite tako,
-da jih v datoteki [`install.R`](install.R) namestite z ukazom `install.packages`.
-Te datoteke (ali ukaza `install.packages`) **ne vključujte** v svoj program -
-gre samo za navodilo za Binder, katere pakete naj namesti pred poganjanjem vašega projekta.
-
-Tako nameščanje paketov se bo izvedlo pred vsakim poganjanjem v Binderju.
-Če se izkaže, da je to preveč zamudno,
-lahko pripravite [lastno sliko](https://github.com/jaanos/APPR-docker) z želenimi paketi.
-
-Če želite v Binderju delati z git,
-v datoteki `gitconfig` nastavite svoje ime in priimek ter e-poštni naslov
-(odkomentirajte vzorec in zamenjajte s svojimi podatki) -
-ob naslednjem zagonu bo mogoče delati commite.
-Te podatke lahko nastavite tudi z `git config --global` v konzoli
-(vendar bodo veljale le v trenutni seji).
