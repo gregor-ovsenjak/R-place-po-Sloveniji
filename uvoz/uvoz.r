@@ -2,10 +2,10 @@ require("dplyr")
 require("tidyr")
 require("readr")
 library("openxlsx")
-require("readxl")7
+require("readxl")
 
-#UVOZ IN OCISCENJE CSV-
-podatki <- read.csv2("./podatki/Neocisceni_podatki/povprecne-mesecne-place-po-statisticnih-regijah.csv",
+#UVOZ IN OCISCENJE CSV- povprecne mesecne place po statisticnih regijah
+place_po_regijah <- read.csv2("./podatki/Neocisceni_podatki/povprecne-mesecne-place-po-statisticnih-regijah.csv",
                         quote = "\"",
                         na=c('-','z','na','--'),
                         skip=2) %>%
@@ -20,12 +20,38 @@ podatki <- read.csv2("./podatki/Neocisceni_podatki/povprecne-mesecne-place-po-st
                      select(-MERITVE) %>% # nepotreben stolpec z eno samo vrednostjo
                      pivot_wider(names_from=SPOL, values_from=POVPRECNA_PLACA) # loci moske in ženske ?
 
-podatki$STAROST <- case_when(podatki$STAROST == "65 let ali veè" ~ "65 let >",
-                             podatki$STAROST == "15-64 let" ~ "15-64 let",
-                             podatki$STAROST == "15-24 let" ~ "15-24 let",
-                             podatki$STAROST == "25-34 let" ~ "25-34 let",
-                             podatki$STAROST == "35-44 let" ~ "35-44 let",
-                             podatki$STAROST == "45-54 let" ~ "45-54 let",
-                             podatki$STAROST == "55-64 let" ~ "55-64 let")
-View(podatki)                     
+place_po_regijah$STAROST <- case_when(place_po_regijah$STAROST == "65 let ali veè" ~ "65 let >",
+                                      place_po_regijah$STAROST == "15-64 let" ~ "15-64 let",
+                                      place_po_regijah$STAROST == "15-24 let" ~ "15-24 let",
+                                      place_po_regijah$STAROST == "25-34 let" ~ "25-34 let",
+                                      place_po_regijah$STAROST == "35-44 let" ~ "35-44 let",
+                                      place_po_regijah$STAROST == "45-54 let" ~ "45-54 let",
+                                      place_po_regijah$STAROST == "55-64 let" ~ "55-64 let")
+View(place_po_regijah)                     
 
+
+# PLACE PO SEKTORJIH
+place_po_sektorjih <- read.csv2("./podatki/Neocisceni_podatki/povprecne-mesecne-place-v-J-Z.csv",
+                                skip=2,
+                                na=c('-','z','na','--')) %>%
+                              rename( # preimenuj stolpce
+                                SEKTOR = 1, 
+                                IZOBRAZBA = 2,
+                                SPOL = 3,
+                                MERITVE = 4,
+                                LETO=5,
+                                POVPRECNA_PLACA=6) %>%
+                              drop_na(LETO) %>% 
+                              select(-MERITVE) # nepotreben stolpec z eno samo vrednostjo
+
+
+
+
+
+# uvoz in ociscenje podatkov za place po dejavnostih
+place_po_dejavnosti <- read_excel(path="./podatki/Neocisceni_podatki/povp-place-po-dejavnostih.xlsx",
+                                  col_names = FALSE,
+                                  skip=2
+                                  ,n_max=33661
+                                  ) %>% fill(1:3)
+View(place_po_dejavnosti)
