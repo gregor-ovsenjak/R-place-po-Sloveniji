@@ -74,3 +74,10 @@ place_po_dejavnosti <- read_excel(path="./podatki/Neocisceni_podatki/povp-place-
                                   ) %>%
                                   summarize(SKUPNO=sum(BRUTO))
 View(place_po_dejavnosti)
+
+
+
+
+write.csv2(place_po_dejavnosti,"./podatki/Pocisceni_podatki/place_po_dejavnosti.csv")
+write.csv2(place_po_sektorjih,"./podatki/Pocisceni_podatki/place_po_sektorjih.csv")
+write.csv2(place_po_regijah,"./podatki/Pocisceni_podatki/place_po_regijah.csv")
