@@ -50,8 +50,27 @@ place_po_sektorjih <- read.csv2("./podatki/Neocisceni_podatki/povprecne-mesecne-
 
 # uvoz in ociscenje podatkov za place po dejavnostih
 place_po_dejavnosti <- read_excel(path="./podatki/Neocisceni_podatki/povp-place-po-dejavnostih.xlsx",
-                                  col_names = FALSE,
-                                  skip=2
-                                  ,n_max=33661
-                                  ) %>% fill(1:3)
+                                    col_names = FALSE,
+                                    skip=2,
+                                    n_max=33661,
+                                    na = c('z','N','M','-')
+                                  ) %>% 
+                                  fill(1:3) %>% 
+                                  select(-c(5,7)) %>%
+                                  rename(
+                                    REGIJA = 1,
+                                    DEJAVNOST = 2,
+                                    DATUM = 3,
+                                    TIP_PLACE = 4,
+                                    MERITEV = 5
+                                  )  %>% 
+                                  separate(DATUM, into=c("LETO", "MESEC"), sep='M') %>%
+                                  pivot_wider(names_from=TIP_PLACE, values_from=MERITEV) %>% 
+                                  select(-MESEC) %>%
+                                  group_by(LETO,DEJAVNOST) %>% 
+                                  rename(
+                                    BRUTO = 4,
+                                    NETO = 5
+                                  ) %>%
+                                  summarize(SKUPNO=sum(BRUTO))
 View(place_po_dejavnosti)
