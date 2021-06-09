@@ -67,7 +67,7 @@ place_po_dejavnosti <- read_excel(path="./podatki/Neocisceni_podatki/povp-place-
                                   separate(DATUM, into=c("LETO", "MESEC"), sep='M') %>%
                                   pivot_wider(names_from=TIP_PLACE, values_from=MERITEV) %>% 
                                   select(-MESEC) %>%
-                                  group_by(LETO,DEJAVNOST) %>% 
+                                  group_by(LETO,DEJAVNOST,REGIJA) %>% 
                                   rename(
                                     BRUTO = 4,
                                     NETO = 5

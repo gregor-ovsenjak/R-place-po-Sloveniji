@@ -71,18 +71,18 @@
 "70";"Pomurska";"55-64 let";2017;1746;1714
 "71";"Pomurska";"55-64 let";2018;1775;1734
 "72";"Pomurska";"55-64 let";2019;1823;1836
-"73";"Pomurska";"65 let ali veè";2008;3924;NA
-"74";"Pomurska";"65 let ali veè";2009;3721;NA
-"75";"Pomurska";"65 let ali veè";2010;3302;NA
-"76";"Pomurska";"65 let ali veè";2011;3803;NA
-"77";"Pomurska";"65 let ali veè";2012;NA;NA
-"78";"Pomurska";"65 let ali veè";2013;NA;NA
-"79";"Pomurska";"65 let ali veè";2014;3820;NA
-"80";"Pomurska";"65 let ali veè";2015;NA;NA
-"81";"Pomurska";"65 let ali veè";2016;NA;NA
-"82";"Pomurska";"65 let ali veè";2017;NA;NA
-"83";"Pomurska";"65 let ali veè";2018;NA;NA
-"84";"Pomurska";"65 let ali veè";2019;3518;3545
+"73";"Pomurska";"65 let >";2008;3924;NA
+"74";"Pomurska";"65 let >";2009;3721;NA
+"75";"Pomurska";"65 let >";2010;3302;NA
+"76";"Pomurska";"65 let >";2011;3803;NA
+"77";"Pomurska";"65 let >";2012;NA;NA
+"78";"Pomurska";"65 let >";2013;NA;NA
+"79";"Pomurska";"65 let >";2014;3820;NA
+"80";"Pomurska";"65 let >";2015;NA;NA
+"81";"Pomurska";"65 let >";2016;NA;NA
+"82";"Pomurska";"65 let >";2017;NA;NA
+"83";"Pomurska";"65 let >";2018;NA;NA
+"84";"Pomurska";"65 let >";2019;3518;3545
 "85";"Podravska";"15-64 let";2008;1382;1292
 "86";"Podravska";"15-64 let";2009;1403;1374
 "87";"Podravska";"15-64 let";2010;1464;1425
@@ -155,18 +155,18 @@
 "154";"Podravska";"55-64 let";2017;1846;1774
 "155";"Podravska";"55-64 let";2018;1890;1788
 "156";"Podravska";"55-64 let";2019;1959;1872
-"157";"Podravska";"65 let ali veè";2008;4086;3053
-"158";"Podravska";"65 let ali veè";2009;4416;3615
-"159";"Podravska";"65 let ali veè";2010;4331;3487
-"160";"Podravska";"65 let ali veè";2011;4162;3811
-"161";"Podravska";"65 let ali veè";2012;3976;4028
-"162";"Podravska";"65 let ali veè";2013;3596;3760
-"163";"Podravska";"65 let ali veè";2014;3666;3379
-"164";"Podravska";"65 let ali veè";2015;3733;3381
-"165";"Podravska";"65 let ali veè";2016;3670;3312
-"166";"Podravska";"65 let ali veè";2017;3496;3074
-"167";"Podravska";"65 let ali veè";2018;3198;3088
-"168";"Podravska";"65 let ali veè";2019;3129;3111
+"157";"Podravska";"65 let >";2008;4086;3053
+"158";"Podravska";"65 let >";2009;4416;3615
+"159";"Podravska";"65 let >";2010;4331;3487
+"160";"Podravska";"65 let >";2011;4162;3811
+"161";"Podravska";"65 let >";2012;3976;4028
+"162";"Podravska";"65 let >";2013;3596;3760
+"163";"Podravska";"65 let >";2014;3666;3379
+"164";"Podravska";"65 let >";2015;3733;3381
+"165";"Podravska";"65 let >";2016;3670;3312
+"166";"Podravska";"65 let >";2017;3496;3074
+"167";"Podravska";"65 let >";2018;3198;3088
+"168";"Podravska";"65 let >";2019;3129;3111
 "169";"Koroška";"15-64 let";2008;1368;1252
 "170";"Koroška";"15-64 let";2009;1367;1318
 "171";"Koroška";"15-64 let";2010;1435;1419
@@ -239,18 +239,18 @@
 "238";"Koroška";"55-64 let";2017;1925;1830
 "239";"Koroška";"55-64 let";2018;1956;1840
 "240";"Koroška";"55-64 let";2019;2009;1914
-"241";"Koroška";"65 let ali veè";2008;3575;NA
-"242";"Koroška";"65 let ali veè";2009;4018;NA
-"243";"Koroška";"65 let ali veè";2010;NA;NA
-"244";"Koroška";"65 let ali veè";2011;3768;NA
-"245";"Koroška";"65 let ali veè";2012;3753;NA
-"246";"Koroška";"65 let ali veè";2013;3651;NA
-"247";"Koroška";"65 let ali veè";2014;4235;NA
-"248";"Koroška";"65 let ali veè";2015;NA;NA
-"249";"Koroška";"65 let ali veè";2016;NA;NA
-"250";"Koroška";"65 let ali veè";2017;3692;3438
-"251";"Koroška";"65 let ali veè";2018;3813;3540
-"252";"Koroška";"65 let ali veè";2019;3503;3674
+"241";"Koroška";"65 let >";2008;3575;NA
+"242";"Koroška";"65 let >";2009;4018;NA
+"243";"Koroška";"65 let >";2010;NA;NA
+"244";"Koroška";"65 let >";2011;3768;NA
+"245";"Koroška";"65 let >";2012;3753;NA
+"246";"Koroška";"65 let >";2013;3651;NA
+"247";"Koroška";"65 let >";2014;4235;NA
+"248";"Koroška";"65 let >";2015;NA;NA
+"249";"Koroška";"65 let >";2016;NA;NA
+"250";"Koroška";"65 let >";2017;3692;3438
+"251";"Koroška";"65 let >";2018;3813;3540
+"252";"Koroška";"65 let >";2019;3503;3674
 "253";"Savinjska";"15-64 let";2008;1372;1250
 "254";"Savinjska";"15-64 let";2009;1381;1314
 "255";"Savinjska";"15-64 let";2010;1464;1373
@@ -323,18 +323,18 @@
 "322";"Savinjska";"55-64 let";2017;1893;1736
 "323";"Savinjska";"55-64 let";2018;1929;1769
 "324";"Savinjska";"55-64 let";2019;1966;1834
-"325";"Savinjska";"65 let ali veè";2008;3668;NA
-"326";"Savinjska";"65 let ali veè";2009;3713;NA
-"327";"Savinjska";"65 let ali veè";2010;3901;NA
-"328";"Savinjska";"65 let ali veè";2011;3863;NA
-"329";"Savinjska";"65 let ali veè";2012;3741;NA
-"330";"Savinjska";"65 let ali veè";2013;3941;3691
-"331";"Savinjska";"65 let ali veè";2014;3513;3329
-"332";"Savinjska";"65 let ali veè";2015;3361;2997
-"333";"Savinjska";"65 let ali veè";2016;3177;3237
-"334";"Savinjska";"65 let ali veè";2017;2816;2942
-"335";"Savinjska";"65 let ali veè";2018;3220;2622
-"336";"Savinjska";"65 let ali veè";2019;2877;3265
+"325";"Savinjska";"65 let >";2008;3668;NA
+"326";"Savinjska";"65 let >";2009;3713;NA
+"327";"Savinjska";"65 let >";2010;3901;NA
+"328";"Savinjska";"65 let >";2011;3863;NA
+"329";"Savinjska";"65 let >";2012;3741;NA
+"330";"Savinjska";"65 let >";2013;3941;3691
+"331";"Savinjska";"65 let >";2014;3513;3329
+"332";"Savinjska";"65 let >";2015;3361;2997
+"333";"Savinjska";"65 let >";2016;3177;3237
+"334";"Savinjska";"65 let >";2017;2816;2942
+"335";"Savinjska";"65 let >";2018;3220;2622
+"336";"Savinjska";"65 let >";2019;2877;3265
 "337";"Zasavska";"15-64 let";2008;1402;1251
 "338";"Zasavska";"15-64 let";2009;1421;1334
 "339";"Zasavska";"15-64 let";2010;1483;1389
@@ -407,18 +407,18 @@
 "406";"Zasavska";"55-64 let";2017;1780;1715
 "407";"Zasavska";"55-64 let";2018;1834;1751
 "408";"Zasavska";"55-64 let";2019;1933;1821
-"409";"Zasavska";"65 let ali veè";2008;NA;NA
-"410";"Zasavska";"65 let ali veè";2009;NA;NA
-"411";"Zasavska";"65 let ali veè";2010;NA;NA
-"412";"Zasavska";"65 let ali veè";2011;NA;NA
-"413";"Zasavska";"65 let ali veè";2012;NA;NA
-"414";"Zasavska";"65 let ali veè";2013;NA;NA
-"415";"Zasavska";"65 let ali veè";2014;NA;NA
-"416";"Zasavska";"65 let ali veè";2015;NA;NA
-"417";"Zasavska";"65 let ali veè";2016;NA;NA
-"418";"Zasavska";"65 let ali veè";2017;NA;NA
-"419";"Zasavska";"65 let ali veè";2018;NA;NA
-"420";"Zasavska";"65 let ali veè";2019;NA;NA
+"409";"Zasavska";"65 let >";2008;NA;NA
+"410";"Zasavska";"65 let >";2009;NA;NA
+"411";"Zasavska";"65 let >";2010;NA;NA
+"412";"Zasavska";"65 let >";2011;NA;NA
+"413";"Zasavska";"65 let >";2012;NA;NA
+"414";"Zasavska";"65 let >";2013;NA;NA
+"415";"Zasavska";"65 let >";2014;NA;NA
+"416";"Zasavska";"65 let >";2015;NA;NA
+"417";"Zasavska";"65 let >";2016;NA;NA
+"418";"Zasavska";"65 let >";2017;NA;NA
+"419";"Zasavska";"65 let >";2018;NA;NA
+"420";"Zasavska";"65 let >";2019;NA;NA
 "421";"Posavska";"15-64 let";2008;1367;1250
 "422";"Posavska";"15-64 let";2009;1382;1323
 "423";"Posavska";"15-64 let";2010;1433;1393
@@ -491,18 +491,18 @@
 "490";"Posavska";"55-64 let";2017;1901;1760
 "491";"Posavska";"55-64 let";2018;1948;1763
 "492";"Posavska";"55-64 let";2019;2005;1862
-"493";"Posavska";"65 let ali veè";2008;3924;NA
-"494";"Posavska";"65 let ali veè";2009;4246;NA
-"495";"Posavska";"65 let ali veè";2010;NA;NA
-"496";"Posavska";"65 let ali veè";2011;3877;NA
-"497";"Posavska";"65 let ali veè";2012;3714;NA
-"498";"Posavska";"65 let ali veè";2013;4209;NA
-"499";"Posavska";"65 let ali veè";2014;3793;NA
-"500";"Posavska";"65 let ali veè";2015;NA;NA
-"501";"Posavska";"65 let ali veè";2016;NA;NA
-"502";"Posavska";"65 let ali veè";2017;NA;NA
-"503";"Posavska";"65 let ali veè";2018;3742;3932
-"504";"Posavska";"65 let ali veè";2019;3190;3574
+"493";"Posavska";"65 let >";2008;3924;NA
+"494";"Posavska";"65 let >";2009;4246;NA
+"495";"Posavska";"65 let >";2010;NA;NA
+"496";"Posavska";"65 let >";2011;3877;NA
+"497";"Posavska";"65 let >";2012;3714;NA
+"498";"Posavska";"65 let >";2013;4209;NA
+"499";"Posavska";"65 let >";2014;3793;NA
+"500";"Posavska";"65 let >";2015;NA;NA
+"501";"Posavska";"65 let >";2016;NA;NA
+"502";"Posavska";"65 let >";2017;NA;NA
+"503";"Posavska";"65 let >";2018;3742;3932
+"504";"Posavska";"65 let >";2019;3190;3574
 "505";"Jugovzhodna Slovenija";"15-64 let";2008;1392;1327
 "506";"Jugovzhodna Slovenija";"15-64 let";2009;1396;1391
 "507";"Jugovzhodna Slovenija";"15-64 let";2010;1493;1471
@@ -575,18 +575,18 @@
 "574";"Jugovzhodna Slovenija";"55-64 let";2017;1897;1904
 "575";"Jugovzhodna Slovenija";"55-64 let";2018;1967;1929
 "576";"Jugovzhodna Slovenija";"55-64 let";2019;2048;2015
-"577";"Jugovzhodna Slovenija";"65 let ali veè";2008;5253;NA
-"578";"Jugovzhodna Slovenija";"65 let ali veè";2009;4470;NA
-"579";"Jugovzhodna Slovenija";"65 let ali veè";2010;3398;NA
-"580";"Jugovzhodna Slovenija";"65 let ali veè";2011;4144;NA
-"581";"Jugovzhodna Slovenija";"65 let ali veè";2012;3888;NA
-"582";"Jugovzhodna Slovenija";"65 let ali veè";2013;4304;NA
-"583";"Jugovzhodna Slovenija";"65 let ali veè";2014;3736;NA
-"584";"Jugovzhodna Slovenija";"65 let ali veè";2015;NA;NA
-"585";"Jugovzhodna Slovenija";"65 let ali veè";2016;NA;NA
-"586";"Jugovzhodna Slovenija";"65 let ali veè";2017;3176;3782
-"587";"Jugovzhodna Slovenija";"65 let ali veè";2018;2683;2597
-"588";"Jugovzhodna Slovenija";"65 let ali veè";2019;3037;3560
+"577";"Jugovzhodna Slovenija";"65 let >";2008;5253;NA
+"578";"Jugovzhodna Slovenija";"65 let >";2009;4470;NA
+"579";"Jugovzhodna Slovenija";"65 let >";2010;3398;NA
+"580";"Jugovzhodna Slovenija";"65 let >";2011;4144;NA
+"581";"Jugovzhodna Slovenija";"65 let >";2012;3888;NA
+"582";"Jugovzhodna Slovenija";"65 let >";2013;4304;NA
+"583";"Jugovzhodna Slovenija";"65 let >";2014;3736;NA
+"584";"Jugovzhodna Slovenija";"65 let >";2015;NA;NA
+"585";"Jugovzhodna Slovenija";"65 let >";2016;NA;NA
+"586";"Jugovzhodna Slovenija";"65 let >";2017;3176;3782
+"587";"Jugovzhodna Slovenija";"65 let >";2018;2683;2597
+"588";"Jugovzhodna Slovenija";"65 let >";2019;3037;3560
 "589";"Osrednjeslovenska";"15-64 let";2008;1657;1567
 "590";"Osrednjeslovenska";"15-64 let";2009;1688;1651
 "591";"Osrednjeslovenska";"15-64 let";2010;1760;1703
@@ -659,18 +659,18 @@
 "658";"Osrednjeslovenska";"55-64 let";2017;2125;2090
 "659";"Osrednjeslovenska";"55-64 let";2018;2176;2126
 "660";"Osrednjeslovenska";"55-64 let";2019;2233;2216
-"661";"Osrednjeslovenska";"65 let ali veè";2008;4176;3197
-"662";"Osrednjeslovenska";"65 let ali veè";2009;4421;3616
-"663";"Osrednjeslovenska";"65 let ali veè";2010;4394;3207
-"664";"Osrednjeslovenska";"65 let ali veè";2011;4228;3048
-"665";"Osrednjeslovenska";"65 let ali veè";2012;4108;3612
-"666";"Osrednjeslovenska";"65 let ali veè";2013;3885;3638
-"667";"Osrednjeslovenska";"65 let ali veè";2014;3665;3426
-"668";"Osrednjeslovenska";"65 let ali veè";2015;3636;3443
-"669";"Osrednjeslovenska";"65 let ali veè";2016;3637;3437
-"670";"Osrednjeslovenska";"65 let ali veè";2017;3386;3407
-"671";"Osrednjeslovenska";"65 let ali veè";2018;3157;3307
-"672";"Osrednjeslovenska";"65 let ali veè";2019;3368;3255
+"661";"Osrednjeslovenska";"65 let >";2008;4176;3197
+"662";"Osrednjeslovenska";"65 let >";2009;4421;3616
+"663";"Osrednjeslovenska";"65 let >";2010;4394;3207
+"664";"Osrednjeslovenska";"65 let >";2011;4228;3048
+"665";"Osrednjeslovenska";"65 let >";2012;4108;3612
+"666";"Osrednjeslovenska";"65 let >";2013;3885;3638
+"667";"Osrednjeslovenska";"65 let >";2014;3665;3426
+"668";"Osrednjeslovenska";"65 let >";2015;3636;3443
+"669";"Osrednjeslovenska";"65 let >";2016;3637;3437
+"670";"Osrednjeslovenska";"65 let >";2017;3386;3407
+"671";"Osrednjeslovenska";"65 let >";2018;3157;3307
+"672";"Osrednjeslovenska";"65 let >";2019;3368;3255
 "673";"Gorenjska";"15-64 let";2008;1510;1351
 "674";"Gorenjska";"15-64 let";2009;1513;1421
 "675";"Gorenjska";"15-64 let";2010;1582;1475
@@ -743,18 +743,18 @@
 "742";"Gorenjska";"55-64 let";2017;1963;1829
 "743";"Gorenjska";"55-64 let";2018;1994;1871
 "744";"Gorenjska";"55-64 let";2019;2069;1941
-"745";"Gorenjska";"65 let ali veè";2008;4158;2621
-"746";"Gorenjska";"65 let ali veè";2009;3773;2481
-"747";"Gorenjska";"65 let ali veè";2010;4307;NA
-"748";"Gorenjska";"65 let ali veè";2011;3657;NA
-"749";"Gorenjska";"65 let ali veè";2012;4267;NA
-"750";"Gorenjska";"65 let ali veè";2013;3842;NA
-"751";"Gorenjska";"65 let ali veè";2014;3341;NA
-"752";"Gorenjska";"65 let ali veè";2015;3360;3362
-"753";"Gorenjska";"65 let ali veè";2016;3683;3287
-"754";"Gorenjska";"65 let ali veè";2017;3629;3363
-"755";"Gorenjska";"65 let ali veè";2018;2983;2763
-"756";"Gorenjska";"65 let ali veè";2019;2912;2676
+"745";"Gorenjska";"65 let >";2008;4158;2621
+"746";"Gorenjska";"65 let >";2009;3773;2481
+"747";"Gorenjska";"65 let >";2010;4307;NA
+"748";"Gorenjska";"65 let >";2011;3657;NA
+"749";"Gorenjska";"65 let >";2012;4267;NA
+"750";"Gorenjska";"65 let >";2013;3842;NA
+"751";"Gorenjska";"65 let >";2014;3341;NA
+"752";"Gorenjska";"65 let >";2015;3360;3362
+"753";"Gorenjska";"65 let >";2016;3683;3287
+"754";"Gorenjska";"65 let >";2017;3629;3363
+"755";"Gorenjska";"65 let >";2018;2983;2763
+"756";"Gorenjska";"65 let >";2019;2912;2676
 "757";"Primorsko-notranjska";"15-64 let";2008;1353;1253
 "758";"Primorsko-notranjska";"15-64 let";2009;1373;1342
 "759";"Primorsko-notranjska";"15-64 let";2010;1413;1372
@@ -827,18 +827,18 @@
 "826";"Primorsko-notranjska";"55-64 let";2017;1792;1783
 "827";"Primorsko-notranjska";"55-64 let";2018;1815;1797
 "828";"Primorsko-notranjska";"55-64 let";2019;1851;1859
-"829";"Primorsko-notranjska";"65 let ali veè";2008;3902;NA
-"830";"Primorsko-notranjska";"65 let ali veè";2009;4079;NA
-"831";"Primorsko-notranjska";"65 let ali veè";2010;3543;NA
-"832";"Primorsko-notranjska";"65 let ali veè";2011;3152;NA
-"833";"Primorsko-notranjska";"65 let ali veè";2012;3877;NA
-"834";"Primorsko-notranjska";"65 let ali veè";2013;4362;NA
-"835";"Primorsko-notranjska";"65 let ali veè";2014;3388;NA
-"836";"Primorsko-notranjska";"65 let ali veè";2015;NA;NA
-"837";"Primorsko-notranjska";"65 let ali veè";2016;NA;NA
-"838";"Primorsko-notranjska";"65 let ali veè";2017;NA;NA
-"839";"Primorsko-notranjska";"65 let ali veè";2018;NA;NA
-"840";"Primorsko-notranjska";"65 let ali veè";2019;NA;NA
+"829";"Primorsko-notranjska";"65 let >";2008;3902;NA
+"830";"Primorsko-notranjska";"65 let >";2009;4079;NA
+"831";"Primorsko-notranjska";"65 let >";2010;3543;NA
+"832";"Primorsko-notranjska";"65 let >";2011;3152;NA
+"833";"Primorsko-notranjska";"65 let >";2012;3877;NA
+"834";"Primorsko-notranjska";"65 let >";2013;4362;NA
+"835";"Primorsko-notranjska";"65 let >";2014;3388;NA
+"836";"Primorsko-notranjska";"65 let >";2015;NA;NA
+"837";"Primorsko-notranjska";"65 let >";2016;NA;NA
+"838";"Primorsko-notranjska";"65 let >";2017;NA;NA
+"839";"Primorsko-notranjska";"65 let >";2018;NA;NA
+"840";"Primorsko-notranjska";"65 let >";2019;NA;NA
 "841";"Goriška";"15-64 let";2008;1478;1336
 "842";"Goriška";"15-64 let";2009;1482;1404
 "843";"Goriška";"15-64 let";2010;1544;1457
@@ -911,15 +911,15 @@
 "910";"Goriška";"55-64 let";2017;1926;1803
 "911";"Goriška";"55-64 let";2018;1965;1827
 "912";"Goriška";"55-64 let";2019;2014;1899
-"913";"Goriška";"65 let ali veè";2008;3804;NA
-"914";"Goriška";"65 let ali veè";2009;4703;NA
-"915";"Goriška";"65 let ali veè";2010;4225;NA
-"916";"Goriška";"65 let ali veè";2011;4052;NA
-"917";"Goriška";"65 let ali veè";2012;4096;NA
-"918";"Goriška";"65 let ali veè";2013;3692;NA
-"919";"Goriška";"65 let ali veè";2014;3321;NA
-"920";"Goriška";"65 let ali veè";2015;NA;NA
-"921";"Goriška";"65 let ali veè";2016;NA;NA
-"922";"Goriška";"65 let ali veè";2017;3130;2290
-"923";"Goriška";"65 let ali veè";2018;3083;3377
-"924";"Goriška";"65 let ali veè";2019;3026;2933
+"913";"Goriška";"65 let >";2008;3804;NA
+"914";"Goriška";"65 let >";2009;4703;NA
+"915";"Goriška";"65 let >";2010;4225;NA
+"916";"Goriška";"65 let >";2011;4052;NA
+"917";"Goriška";"65 let >";2012;4096;NA
+"918";"Goriška";"65 let >";2013;3692;NA
+"919";"Goriška";"65 let >";2014;3321;NA
+"920";"Goriška";"65 let >";2015;NA;NA
+"921";"Goriška";"65 let >";2016;NA;NA
+"922";"Goriška";"65 let >";2017;3130;2290
+"923";"Goriška";"65 let >";2018;3083;3377
+"924";"Goriška";"65 let >";2019;3026;2933

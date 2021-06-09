@@ -1,15 +1,35 @@
-# 3. faza: Vizualizacija podatkov
+require("ggplot2")
+require("dplyr")
+require("readr")
 
-# Uvozimo zemljevid.
-zemljevid <- uvozi.zemljevid("http://baza.fmf.uni-lj.si/OB.zip", "OB",
-                             pot.zemljevida="OB", encoding="Windows-1250")
-# Če zemljevid nima nastavljene projekcije, jo ročno določimo
-proj4string(zemljevid) <- CRS("+proj=utm +zone=10+datum=WGS84")
+place_po_regijah <- read.csv2("./podatki/Pocisceni_podatki/place_po_regijah.csv")
+place_po_regijah %>% select(-1) %>% View
 
-levels(zemljevid$OB_UIME) <- levels(zemljevid$OB_UIME) %>%
-  { gsub("Slovenskih", "Slov.", .) } %>% { gsub("-", " - ", .) }
-zemljevid$OB_UIME <- factor(zemljevid$OB_UIME, levels=levels(obcine$obcina))
+narisi.place.po.regijah <- function(place_po_regijah) {
+  imena <-unique(place_po_regijah$STATISTICNA_REGIJA)
+  for (ime in imena){
+    graph1 <- ggplot(data=place_po_regijah%>%filter(STATISTICNA_REGIJA==ime,STAROST != "65 let >"),
+                     aes(x=LETO,y=Moški)) +
+      geom_point() +
+      geom_smooth(fill="blue",
+                  colour="darkblue", size=1) +
+      facet_grid(.~STAROST)
+    
+    
+    graph1 <- graph1 + geom_point(aes(x=LETO,y=Ženske)) +
+      geom_smooth(aes(x=LETO,y=Ženske), fill="red",
+                  colour="red", size=1,alpha=0.1) +
+      facet_grid(~STAROST)
+    
+    graph1 <- graph1 +
+      ggtitle(paste("Regija -", ime)) + 
+      theme_bw() +
+      theme(plot.title = element_text(hjust = 0.5),
+            axis.text.x = element_text(angle = -40, vjust = 1, hjust = 0)) +
+      ylab("Plača") +
+      xlab("Leto")
+    
+    print(graph1)
+  }
 
-# Izračunamo povprečno velikost družine
-povprecja <- druzine %>% group_by(obcina) %>%
-  summarise(povprecje=sum(velikost.druzine * stevilo.druzin) / sum(stevilo.druzin))
+}
