@@ -33,3 +33,18 @@ narisi.place.po.regijah <- function(place_po_regijah) {
   }
 
 }
+
+
+
+box_plot_po_regijah <- function(place_po_regijah) {
+    place_po_regijah%>%filter(STAROST != "65 let >") %>%
+      ggplot(aes(x=STATISTICNA_REGIJA, y=Moški)) + 
+      geom_jitter() + 
+      geom_boxplot(color="darkblue", size=1,fill="blue", alpha=I(0.2)) +
+      theme_bw()+
+      ggtitle("Razpršenost plač po regijah")+
+      theme(plot.title = element_text(hjust = 0.5, colour = "darkblue"),
+            axis.text.x = element_text(angle = -20, vjust = 1, hjust = 0)) +
+      ylab("Plača") +
+      xlab("Statistična regija")
+}
