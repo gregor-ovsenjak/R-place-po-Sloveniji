@@ -5,6 +5,12 @@ require("readr")
 place_po_regijah <- read.csv2("./podatki/Pocisceni_podatki/place_po_regijah.csv")
 place_po_regijah %>% select(-1) %>% View
 
+
+place_po_sektorju <- read.csv2("./podatki/Pocisceni_podatki/place_po_sektorjih.csv")
+place_po_sektorju %>% View
+
+
+
 narisi.place.po.regijah <- function(place_po_regijah) {
   imena <-unique(place_po_regijah$STATISTICNA_REGIJA)
   for (ime in imena){
@@ -35,16 +41,66 @@ narisi.place.po.regijah <- function(place_po_regijah) {
 }
 
 
-
-box_plot_po_regijah <- function(place_po_regijah) {
-    place_po_regijah%>%filter(STAROST != "65 let >") %>%
-      ggplot(aes(x=STATISTICNA_REGIJA, y=Moški)) + 
-      geom_jitter() + 
-      geom_boxplot(color="darkblue", size=1,fill="blue", alpha=I(0.2)) +
-      theme_bw()+
-      ggtitle("Razpršenost plač po regijah")+
-      theme(plot.title = element_text(hjust = 0.5, colour = "darkblue"),
-            axis.text.x = element_text(angle = -20, vjust = 1, hjust = 0)) +
-      ylab("Plača") +
-      xlab("Statistična regija")
+box.plot.po.regijah <- function(place_po_regijah,spol="Moški") {
+      color = "blue"
+      aes1 = aes(x=STATISTICNA_REGIJA, y=Moški)
+      if (spol == "Moški"){
+        aes1 = aes(x=STATISTICNA_REGIJA, y=Moški)
+      }else {
+        aes1 = aes(x=STATISTICNA_REGIJA, y=Ženske)
+        color = "red"
+      }
+      
+      place_po_regijah%>%filter(STAROST != "65 let >") %>%
+        ggplot(aes1) + 
+        geom_jitter() + 
+        geom_boxplot(color=color, size=1,fill=color, alpha=I(0.2)) +
+        theme_bw()+
+        ggtitle("Razpršenost plač po regijah")+
+        theme(plot.title = element_text(hjust = 0.5, colour = "darkblue"),
+              axis.text.x = element_text(angle = -20, vjust = 1, hjust = 0)) +
+        ylab("Plača") +
+        xlab("Statistična regija")
 }
+
+
+
+box.plot.po.regijah(place_po_regijah,spol="Moški")
+
+
+
+placa_po_izobrazbi <- function(place_po_sektorju) {
+  place_po_sektorju %>% 
+    filter(SEKTOR != "1 Javni in zasebni sektor - SKUPAJ") %>%
+    ggplot(aes(x=IZOBRAZBA,y=POVPRECNA_PLACA)) +
+    geom_jitter() +
+    geom_boxplot(color="blue",fill="blue",size=1,alpha=I(0.3)) +
+    theme_bw()+ 
+    ggtitle("Razpršenost plač po izobrazbi")+
+    theme( plot.title = element_text(hjust = 0.5)) +
+    ylab("Plača") +
+    xlab("Izobrazba")
+    
+}
+
+
+delez.zaposlenih.v.sektorjih.po.placah <- function(place_po_sektorju,placa=2000) {
+
+  place_po_sektorju %>% 
+    filter(SEKTOR != "1 Javni in zasebni sektor - SKUPAJ",
+           POVPRECNA_PLACA > placa,
+           SEKTOR != "11 Javni sektor - SKUPAJ") %>% # samo visokošolska izobrazba
+    ggplot(aes(x=SPOL, fill=factor(SEKTOR))) + 
+    geom_bar(position="fill",color="black",alpha=I(0.8))+
+    theme_bw() +
+    ggtitle("Delež zaposlenih v posameznih sektorjih")+
+    theme( plot.title = element_text(hjust = 0.5),
+           legend.background = element_blank(),
+           legend.box.background = element_rect(colour = "black")) +
+    ylab("Delež") +
+    xlab("Spol") +
+    guides(fill=guide_legend("SEKTOR"))
+    
+}
+
+delez.zaposlenih.v.sektorjih.po.placah(place_po_sektorju)
