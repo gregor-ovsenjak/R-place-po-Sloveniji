@@ -103,4 +103,28 @@ delez.zaposlenih.v.sektorjih.po.placah <- function(place_po_sektorju,placa=2000)
     
 }
 
-delez.zaposlenih.v.sektorjih.po.placah(place_po_sektorju)
+delez.zaposlenih.v.sektorjih.po.placah(place_po_sektorju,placa=2000) 
+
+
+
+
+
+placa_po_sektorjih <- function(place_po_sektorju) {
+  
+  place_po_sektorju %>% 
+    filter(SEKTOR != "1 Javni in zasebni sektor - SKUPAJ",
+           IZOBRAZBA != "Izobrazba - Skupaj",
+           SPOL != "Spol - SKUPAJ") %>%
+    ggplot(aes(x=SEKTOR,y=POVPRECNA_PLACA,colors=IZOBRAZBA)) +
+    geom_jitter() +
+    geom_boxplot(color="orange",fill="orange",size=1,alpha=I(0.2)) +
+    theme_bw()+ 
+    ggtitle("Razpršenost plač po sektorjih")+
+    theme( plot.title = element_text(hjust = 0.5)) +
+    ylab("Plača") +
+    xlab("Sektor")
+    
+  
+  
+}
+
