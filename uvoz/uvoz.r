@@ -1,11 +1,7 @@
-require("dplyr")
-require("tidyr")
-require("readr")
-library("openxlsx")
-require("readxl")
+
 
 #UVOZ IN OCISCENJE CSV- povprecne mesecne place po statisticnih regijah
-place_po_regijah <- read.csv2("./podatki/Neocisceni_podatki/povprecne-mesecne-place-po-statisticnih-regijah.csv",
+place_po_regijah <- read.csv2("../podatki/Neocisceni_podatki/povprecne-mesecne-place-po-statisticnih-regijah.csv",
                         quote = "\"",
                         na=c('-','z','na','--'),
                         skip=2) %>%
@@ -27,11 +23,11 @@ place_po_regijah$STAROST <- case_when(place_po_regijah$STAROST == "65 let ali ve
                                       place_po_regijah$STAROST == "35-44 let" ~ "35-44 let",
                                       place_po_regijah$STAROST == "45-54 let" ~ "45-54 let",
                                       place_po_regijah$STAROST == "55-64 let" ~ "55-64 let")
-View(place_po_regijah)                     
+
 
 
 # PLACE PO SEKTORJIH
-place_po_sektorjih <- read.csv2("./podatki/Neocisceni_podatki/povprecne-mesecne-place-v-J-Z.csv",
+place_po_sektorjih <- read.csv2("../podatki/Neocisceni_podatki/povprecne-mesecne-place-v-J-Z.csv",
                                 skip=2,
                                 na=c('-','z','na','--')) %>%
                               rename( # preimenuj stolpce
@@ -46,10 +42,8 @@ place_po_sektorjih <- read.csv2("./podatki/Neocisceni_podatki/povprecne-mesecne-
 
 
 
-
-
 # uvoz in ociscenje podatkov za place po dejavnostih
-place_po_dejavnosti <- read_excel(path="./podatki/Neocisceni_podatki/povp-place-po-dejavnostih.xlsx",
+place_po_dejavnosti <- read_excel(path="../podatki/Neocisceni_podatki/povp-place-po-dejavnostih.xlsx",
                                     col_names = FALSE,
                                     skip=2,
                                     n_max=33661,
@@ -73,11 +67,10 @@ place_po_dejavnosti <- read_excel(path="./podatki/Neocisceni_podatki/povp-place-
                                     NETO = 5
                                   ) %>%
                                   summarize(SKUPNO=sum(BRUTO))
-View(place_po_dejavnosti)
 
 
 
 
-write.csv2(place_po_dejavnosti,"./podatki/Pocisceni_podatki/place_po_dejavnosti.csv")
-write.csv2(place_po_sektorjih,"./podatki/Pocisceni_podatki/place_po_sektorjih.csv")
-write.csv2(place_po_regijah,"./podatki/Pocisceni_podatki/place_po_regijah.csv")
+write.csv2(place_po_dejavnosti,"../podatki/Pocisceni_podatki/place_po_dejavnosti.csv")
+write.csv2(place_po_sektorjih,"../podatki/Pocisceni_podatki/place_po_sektorjih.csv")
+write.csv2(place_po_regijah,"../podatki/Pocisceni_podatki/place_po_regijah.csv")

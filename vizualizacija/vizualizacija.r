@@ -1,13 +1,6 @@
-require("ggplot2")
-require("dplyr")
-require("readr")
-
-place_po_regijah <- read.csv2("./podatki/Pocisceni_podatki/place_po_regijah.csv")
-place_po_regijah %>% select(-1) %>% View
 
 
-place_po_sektorju <- read.csv2("./podatki/Pocisceni_podatki/place_po_sektorjih.csv")
-place_po_sektorju %>% View
+place_po_regijah <- place_po_regijah %>% select(-1)
 
 
 
@@ -41,6 +34,7 @@ narisi.place.po.regijah <- function(place_po_regijah) {
 }
 
 
+
 box.plot.po.regijah <- function(place_po_regijah,spol="Moški") {
       color = "blue"
       aes1 = aes(x=STATISTICNA_REGIJA, y=Moški,color=STAROST)
@@ -65,10 +59,6 @@ box.plot.po.regijah <- function(place_po_regijah,spol="Moški") {
 
 
 
-box.plot.po.regijah(place_po_regijah,spol="Moški")
-
-
-
 placa_po_izobrazbi <- function(place_po_sektorju) {
   place_po_sektorju %>% 
     filter(SEKTOR != "1 Javni in zasebni sektor - SKUPAJ") %>%
@@ -82,6 +72,7 @@ placa_po_izobrazbi <- function(place_po_sektorju) {
     xlab("Izobrazba")
     
 }
+
 
 
 delez.zaposlenih.v.sektorjih.po.placah <- function(place_po_sektorju,placa=2000) {
@@ -103,10 +94,6 @@ delez.zaposlenih.v.sektorjih.po.placah <- function(place_po_sektorju,placa=2000)
     
 }
 
-delez.zaposlenih.v.sektorjih.po.placah(place_po_sektorju,placa=2000) 
-
-
-
 
 
 placa_po_sektorjih <- function(place_po_sektorju) {
@@ -126,8 +113,5 @@ placa_po_sektorjih <- function(place_po_sektorju) {
            legend.box.background = element_rect(colour = "black")) +
     ylab("Plača") +
     xlab("Sektor")
-    
-  
-  
 }
 
