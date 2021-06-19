@@ -18,7 +18,6 @@ __pycache__
 *.log
 *.lot
 *.out
-*.pdf
 *.png
 *.prj
 *.pyc
