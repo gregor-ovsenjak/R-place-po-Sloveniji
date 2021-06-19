@@ -3,13 +3,17 @@ title: "Analiza plač po regijah"
 author: "Gregor Ovsenjak"
 output:
   pdf_document:
+    number_sections: true
     includes:
       in_header: ../lib/styles.sty
     latex_engine: xelatex
+header-includes: 
+- \usepackage{graphicx}
+- \usepackage{float}
 ---
 
 ```{r setup, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
-knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE,fig.pos='H')
 
 # Uvoz vseh potrebnih knjižnic
 source("../lib/libraries.r", encoding="UTF-8")
@@ -22,7 +26,11 @@ source("../lib/rstudio.r", encoding="UTF-8")
 
 # Izbira teme
 
-Za vzorec bomo prikazali nekaj podatkov o slovenskih občinah.
+Analizirali bomo povprečno plačo v Sloveniji glede na več različnih parametrov
+ter poskušali ugotoviti vzorce v podatkih za kasnejšo pdorobnejšo analizo. Za 
+boljše razumevanje ter lažjo predstavo se najprej lotimo vizualizacije podatkov.
+Te pridobimo na spletni strani statističnega urada Slovenije ([SURS]
+(https://www.stat.si/statweb)) v obliki `csv` in `Excel` datotek.
 
 ***
 
@@ -32,37 +40,52 @@ Za vzorec bomo prikazali nekaj podatkov o slovenskih občinah.
 source("../uvoz/uvoz.r", encoding="UTF-8")
 ```
 
-Uvozili smo podatke o občinah v obliki CSV s statističnega urada ter v obliki HTML
-z Wikipedije. Podatke imamo v dveh razpredelnicah v obliki *tidy data*.
+Uvozili smo podatke o povprečnih plačah glede na statistično regijo,
+sektorju dela ter dejavnosti.  Podatke imamo v treh razpredelnicah v obliki
+*tidy data*.
 
-1. `druzine` - podatki o družinah za vsako občino
-  - `obcina` - spremenljivka: ime občine (neurejen faktor),
-  - `velikost.druzine` - spremenljivka: število otrok v družini (število: 1, 2, 3 ali 4, kjer zadnja vrednost pomeni 4 ali več),
-  - `stevilo.druzin` - meritev: število družin z ustreznim številom otrok v ustrezni občini (število).
 
-2. `obcine` - podatki o občinah
-  - `obcina` - spremenljivka: ime občine (neurejen faktor),
-  - `povrsina` - meritev: površina občine v km$^2$ (število),
-  - `prebivalci` - meritev: prebivalstvo občine (število),
-  - `gostota` - meritev: število prebivalcev na km$^2$ (število),
-  - `naselja` - meritev: število naselij v občini (število),
-  - `ustanovitev` - meritev: leto ustanovitve občine (število),
-  - `pokrajina` - meritev: pokrajina, ki ji občina pripada (neurejen faktor),
-  - `regija` - meritev: regija, ki ji občina pripada (neurejen faktor),
-  - `odcepitev` - meritev: podatki o občinah, od katerih se je občina odcepila (besedilo).
+    
+1. `Povprečne plače po statističnih regijah`
 
-**Opomba**: da bi razpredelnica `obcine` res bila v obliki *tidy data*, bi morali odstraniti stolpec `gostota` (saj je izpeljan iz stolpcev `povrsina` in `prebivalci`), podatke o pokrajinah pa bi morali premakniti v drugo razpredelnico, saj nekatere občine pripadajo dvema pokrajinama. Podobno bi morali narediti tudi s stolpcem `odcepitev`.
+  * `Statistična regija` - statistične regije v Sloveniji
+  * `Starost` - podatek: starostne skupine v letih (15-64, 15-24, 25-34, 35-44, 45-54, 55-64) 
+  * `Leto` - podatek: Leto meritve plače,
+  * `Moški` - meritev: Bruto povprečna plača za moške v evrih,
+  * `Ženske`- meritev: Bruto povprečna plača za ženske v evrih
 
-Spodnji graf prikazuje porazdelitev števila naselij v občinah.
+
+
+2. `Povprečne plače po sektorju`
+  * `Sektor` - podatek: sektor dela v državi (Zasebni, javni sektor- sektor država, Javni sektor - javne družbe ),
+  * `Izobrazba` - podatek: dosežena izobrazba (Osnovnošolska ali manj, Srednješolska, Visokošolska),
+  * `Spol` - podatek: spol,
+  * `Leto` - podatek: Leto meritve,
+  * `Povprečna plača` - meritev: Bruto povprečna plača v evrih,
+
 
 ***
 # Analiza in vizualizacija podatkov
 
-```{r vizualizacija}
+
+## Vizualizacija plač po regijah
+Najprej se lotimo izrisa gibanja plač po letih za vsako statistično regijo, kar je prikazano na spodnjih slikah.
+Po analizi slik lahko hitro opazimo naslednje trende:
+
+  * razliko v plačah med spoloma (moški-modra, ženske-rdeča),
+  
+  * višanje plač skozi leta,
+  
+  * s prehajanjem v višje starostne skupine pričakujemo tudi večje plače posameznikov,
+  
+  * največje plače so v Osrednjoslovenski najmanjše pa v Pomurski regiji.
+
+```{r vizualizacija, fig.height=2.5,fig.width=6, fig.align='left'}
+
 source("../vizualizacija/vizualizacija.r", encoding="UTF-8")
 
+narisi.place.po.regijah(place_po_regijah)
 
-delez.zaposlenih.v.sektorjih.po.placah(place_po_sektorju,placa=2000) 
 
 ```
 

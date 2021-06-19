@@ -1,5 +1,4 @@
 
-
 #UVOZ IN OCISCENJE CSV- povprecne mesecne place po statisticnih regijah
 place_po_regijah <- read.csv2("../podatki/Neocisceni_podatki/povprecne-mesecne-place-po-statisticnih-regijah.csv",
                         quote = "\"",
@@ -67,7 +66,6 @@ place_po_dejavnosti <- read_excel(path="../podatki/Neocisceni_podatki/povp-place
                                     NETO = 5
                                   ) %>%
                                   summarize(SKUPNO=sum(BRUTO))
-
 
 
 

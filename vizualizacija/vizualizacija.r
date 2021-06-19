@@ -1,10 +1,9 @@
 
 
-place_po_regijah <- place_po_regijah %>% select(-1)
-
 
 
 narisi.place.po.regijah <- function(place_po_regijah) {
+  
   imena <-unique(place_po_regijah$STATISTICNA_REGIJA)
   for (ime in imena){
     graph1 <- ggplot(data=place_po_regijah%>%filter(STATISTICNA_REGIJA==ime,STAROST != "65 let >"),
@@ -56,6 +55,7 @@ box.plot.po.regijah <- function(place_po_regijah,spol="Moški") {
         ylab("Plača") +
         xlab("Statistična regija")
 }
+box.plot.po.regijah(place_po_regijah)
 
 
 
