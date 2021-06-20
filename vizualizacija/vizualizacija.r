@@ -67,7 +67,8 @@ placa_po_izobrazbi <- function(place_po_sektorju) {
     geom_boxplot(color="blue",fill="blue",size=1,alpha=I(0.3)) +
     theme_bw()+ 
     ggtitle("Razpršenost plač po izobrazbi")+
-    theme( plot.title = element_text(hjust = 0.5)) +
+    theme( plot.title = element_text(hjust = 0.5),
+           axis.text.x = element_text(angle = -10, vjust = 1, hjust = 0)) +
     ylab("Plača") +
     xlab("Izobrazba")
     
@@ -84,7 +85,7 @@ delez.zaposlenih.v.sektorjih.po.placah <- function(place_po_sektorju,placa=2000)
     ggplot(aes(x=SPOL, fill=factor(SEKTOR))) + 
     geom_bar(position="fill",color="black",alpha=I(0.8))+
     theme_bw() +
-    ggtitle("Delež zaposlenih v posameznih sektorjih")+
+    ggtitle("Delež zaposlenih v posameznih sektorjih z visokošolsko izobrazbo")+
     theme( plot.title = element_text(hjust = 0.5),
            legend.background = element_blank(),
            legend.box.background = element_rect(colour = "black")) +
