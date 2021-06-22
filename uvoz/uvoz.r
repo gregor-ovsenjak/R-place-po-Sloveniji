@@ -46,7 +46,7 @@ place_po_dejavnosti <- read_excel(path="../podatki/Neocisceni_podatki/povp-place
                                     col_names = FALSE,
                                     skip=2,
                                     n_max=33661,
-                                    na = c('z','N','M','-')
+                                    na = c('z','N','M','NA')
                                   ) %>% 
                                   fill(1:3) %>% 
                                   select(-c(5,7)) %>%

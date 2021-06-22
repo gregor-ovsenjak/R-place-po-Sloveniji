@@ -116,3 +116,40 @@ placa_po_sektorjih <- function(place_po_sektorju) {
     xlab("Sektor")
 }
 
+
+
+placa_po_dejavnosti <- function(place_po_dejavnosti) {
+  
+    place_po_dejavnosti %>% 
+    rowwise() %>%
+    mutate(SKUPNO = sum(SKUPNO/12,na.rm=TRUE)) %>%
+    group_by(REGIJA) %>%
+    top_n(1,SKUPNO)
+    placa %>% 
+      mutate(REGIJA = replace(REGIJA,which(REGIJA=="Posavska"),"Spodnjeposavska")) %>% 
+      mutate(REGIJA = replace(REGIJA,which(REGIJA=="Primorsko-notranjska"),"Notranjsko−kraška"))
+    
+    zemljevid.place <- zemljevid_slovenije %>% left_join(placa, by=c("NAME_1"="REGIJA"))
+    zemljevid.place$DEJAVNOST <- sub("^[ [:upper:] ]", "",zemljevid.place$DEJAVNOST)
+    
+    ggplot(zemljevid.place, aes(x=long, y=lat, fill=DEJAVNOST, label=paste0(NAME_1, "\n", " "))) +
+      geom_polygon(aes(group=group)) +
+      geom_text(data=zemljevid.place %>% group_by(NAME_1,DEJAVNOST)  %>% 
+                  summarise(long=mean(long), lat=mean(lat)), size=5, colour="black",angle=-0) +
+      theme(axis.line=element_blank(),
+            axis.text.x=element_blank(),
+            axis.text.y=element_blank(),
+            axis.ticks=element_blank(),
+            axis.title.x=element_blank(),
+            axis.title.y=element_blank(),
+            panel.background=element_blank(),
+            panel.border=element_blank(),
+            panel.grid.major=element_blank(),
+            panel.grid.minor=element_blank(),
+            plot.background=element_blank(),
+            legend.text = element_text(size=10),
+            legend.box.background = element_rect(colour = "black")) +
+      labs(fill="Dejavnost") 
+  
+}
+

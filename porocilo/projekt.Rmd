@@ -125,6 +125,19 @@ delez.zaposlenih.v.sektorjih.po.placah(place_po_sektorju)
 
 ```
 
+
+```{r dejavnost}
+
+placa_po_dejavnosti(place_po_dejavnosti)
+
+```
+
+
+
+```{r map,fig.height=8,fig.width=14, fig.align='right'}
+placa_po_dejavnosti(place_po_dejavnosti)
+```
+
 ***
 
 
