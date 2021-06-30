@@ -114,25 +114,16 @@ placa_po_izobrazbi(place_po_sektorju)
 kjer lahko sklepamo po že omenjenih rezultatih. Splača se doseči visokošolsko izobrazbo, kajti le ta pomeni tudi
 višjo plačo. Opazimo pa tudi zanimivo dejstvo, da se razpon plač pri visokošolski izobrazbi ne prekriva z 
 razponom plač ostalih izobrazb. To v razpredelnici nakazuje, da vse plače večje od 2000 evrov pomenijo tudi  doseženo 
-visokošolsko izobrazbo. To dejstvo bomo izkoristili pri naslednjem vpogledu v razpredelnico, kjer bomo izluščili samo osebe z 
-visokošolsko izobrazbo ter izrisali delež zaposlenih le teh v posameznih sektorjih.
+visokošolsko izobrazbo. Pa si poglejmo še naslednji boxplot, ki dodatno potrjuje hierarhijo plač po izobrazbi.
 
 
-```{r delez, fig.height=4,fig.width=7.2, fig.align='center'}
+```{r delez, fig.height=5,fig.width=7.2, fig.align='center'}
 
-
-delez.zaposlenih.v.sektorjih.po.placah(place_po_sektorju)
+placa_po_sektorjih(place_po_sektorju)
 
 ```
 
-
-```{r dejavnost}
-
-placa_po_dejavnosti(place_po_dejavnosti)
-
-```
-
-
+## Vizualizacija najbolj donosnih dejavnosti po regijah
 
 ```{r map,fig.height=8,fig.width=14, fig.align='right'}
 placa_po_dejavnosti(place_po_dejavnosti)

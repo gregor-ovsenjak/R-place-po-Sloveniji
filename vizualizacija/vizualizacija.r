@@ -80,8 +80,9 @@ delez.zaposlenih.v.sektorjih.po.placah <- function(place_po_sektorju,placa=2000)
 
   place_po_sektorju %>% 
     filter(SEKTOR != "1 Javni in zasebni sektor - SKUPAJ",
-           POVPRECNA_PLACA > placa,
-           SEKTOR != "11 Javni sektor - SKUPAJ") %>% # samo visokošolska izobrazba
+           POVPRECNA_PLACA > 2000,
+           SEKTOR != "11 Javni sektor - SKUPAJ",
+           IZOBRAZBA != "Izobrazba - Skupaj") %>% # samo visokošolska izobrazba
     ggplot(aes(x=SPOL, fill=factor(SEKTOR))) + 
     geom_bar(position="fill",color="black",alpha=I(0.8))+
     theme_bw() +
@@ -120,14 +121,13 @@ placa_po_sektorjih <- function(place_po_sektorju) {
 
 placa_po_dejavnosti <- function(place_po_dejavnosti) {
   
-    place_po_dejavnosti %>% 
+    placa<- place_po_dejavnosti %>% 
     rowwise() %>%
     mutate(SKUPNO = sum(SKUPNO/12,na.rm=TRUE)) %>%
     group_by(REGIJA) %>%
-    top_n(1,SKUPNO)
-    placa %>% 
-      mutate(REGIJA = replace(REGIJA,which(REGIJA=="Posavska"),"Spodnjeposavska")) %>% 
-      mutate(REGIJA = replace(REGIJA,which(REGIJA=="Primorsko-notranjska"),"Notranjsko−kraška"))
+    top_n(1,SKUPNO) %>%
+     mutate(REGIJA = replace(REGIJA,which(REGIJA=="Posavska"),"Spodnjeposavska")) %>% 
+     mutate(REGIJA = replace(REGIJA,which(REGIJA=="Primorsko-notranjska"),"Notranjsko−kraška"))
     
     zemljevid.place <- zemljevid_slovenije %>% left_join(placa, by=c("NAME_1"="REGIJA"))
     zemljevid.place$DEJAVNOST <- sub("^[ [:upper:] ]", "",zemljevid.place$DEJAVNOST)
